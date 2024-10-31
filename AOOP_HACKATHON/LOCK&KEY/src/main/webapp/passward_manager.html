@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Manager</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to CSS file -->
+</head>
+<body>
+
+<div class="container">
+    <h1>Password Manager</h1>
+
+    <!-- Section for adding a new password -->
+    <div class="form-section">
+        <h2>Add a New Password</h2>
+        <form action="PasswordManagerServlet" method="post">
+            <label for="service">Service Name:</label>
+            <input type="text" id="service" name="service" placeholder="e.g., Facebook" required>
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="e.g., john_doe" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="e.g., mySecret123" required>
+
+            <button type="submit" class="btn-primary">Add Password</button>
+        </form>
+    </div>
+
+    <!-- Section for retrieving a password -->
+    <div class="retrieve-section">
+        <h2>Retrieve Password</h2>
+        <form action="PasswordManagerServlet" method="get">
+            <label for="retrieve-service">Service Name:</label>
+            <input type="text" id="retrieve-service" name="service" placeholder="e.g., Facebook" required>
+
+            <button type="submit" class="btn-primary">Retrieve Password</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
